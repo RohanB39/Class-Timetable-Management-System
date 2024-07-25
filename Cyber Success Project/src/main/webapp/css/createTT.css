@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapse-btn {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sidebar-header h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.blue {
+    color: #04c4de;
+}
+
+.green {
+    color: #51ad05;
+}
+
+.active {
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar.collapsed .sidebar-header h2 {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-header i {
+    margin-top: 20px;
+}
+
+.sidebar.collapsed .active {
+    background: #f4f4f4;
+    border-right: thick double #32a1ce;
+    border-radius: 10px;
+}
+
+.sidebar.collapsed .sidebar-nav ul li a span {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-nav ul li a i {
+    margin-right: 0;
+    padding: 10px;
+}
+
+.sidebar.collapsed .sidebar-nav ul li a i:hover {
+    background: #f4f4f4;
+    border-right: thick double #32a1ce;
+    border-radius: 10px;
+    scale: 1.1;
+}
+
+.sidebar.collapsed .sidebar-nav h4 {
+    display: none;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar-nav ul li a:hover {
+    font-weight: 600;
+}
+
+/* Specific Icon Colors */
+.icon-timetable {
+    color: #ff9900;
+} /* Orange */
+.icon-managers {
+    color: #4caf50;
+} /* Green */
+.icon-tt {
+    color: blue;
+}
+.icon-batches {
+    color: #2196f3;
+} /* Blue */
+.icon-attendance {
+    color: #ff5722;
+} /* Deep Orange */
+.icon-timetables {
+    color: #673ab7;
+} /* Deep Purple */
+.icon-trainers {
+    color: #009688;
+} /* Teal */
+.icon-forgot-manager-password {
+    color: #e91e63;
+} /* Pink */
+.icon-forgot-trainer-password {
+    color: #3f51b5;
+} /* Indigo */
+.icon-profile {
+    color: #607d8b;
+} /* Blue Grey */
+.icon-settings {
+    color: #795548;
+} /* Brown */
+.icon-logout {
+    color: #f44336;
+} /* Red */
+.sidebar-nav ul li a i {
+    margin-right: 10px;
+}
+
+/* Navbar end */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.main-content>.welcome-msg {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.welcome-msg i {
+    padding: 0px 20px;
+    color: #51ad05;
+    position: relative;
+}

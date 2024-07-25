@@ -1,0 +1,295 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+	;
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+}
+
+.dashboard {
+	display: flex;
+}
+
+.sidebar {
+	width: 260px;
+	height: 100vh;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+	transition: width 0.3s;
+	overflow: hidden;
+}
+
+.sidebar.collapsed {
+	width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.collapse-btn {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.sidebar-header h2 {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.blue {
+	color: #04c4de;
+}
+
+.green {
+	color: #51ad05;
+}
+
+.active {
+	font-weight: 600;
+}
+
+.sidebar-nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sidebar-nav ul li {
+	margin: 20px 0;
+}
+
+.sidebar-nav ul li a {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+}
+
+.sidebar.collapsed .sidebar-header h2 {
+	display: none;
+}
+
+.sidebar.collapsed .sidebar-header i {
+	margin-top: 20px;
+}
+
+.sidebar.collapsed .active {
+	background: #f4f4f4;
+	border-right: thick double #32a1ce;
+	border-radius: 10px;
+}
+
+.sidebar.collapsed .sidebar-nav ul li a span {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-nav ul li a i {
+    margin-right: 0;
+    padding: 10px;
+}
+
+.sidebar.collapsed .sidebar-nav ul li a i:hover {
+	background: #f4f4f4;
+	border-right: thick double #32a1ce;
+	border-radius: 10px;
+	scale: 1.1;
+}
+
+.sidebar.collapsed .sidebar-nav h4 {
+	display: none;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar-nav ul li a:hover {
+	font-weight: 600;
+}
+
+/* Specific Icon Colors */
+.icon-timetable {
+	color: #ff9900;
+} /* Orange */
+.icon-managers {
+	color: #4caf50;
+} /* Green */
+icon-tt {
+	color: blue;
+}
+.icon-batches {
+	color: #2196f3;
+} /* Blue */
+.icon-attendance {
+	color: #ff5722;
+} /* Deep Orange */
+.icon-timetables {
+	color: #673ab7;
+} /* Deep Purple */
+.icon-trainers {
+	color: #009688;
+} /* Teal */
+.icon-forgot-manager-password {
+	color: #e91e63;
+} /* Pink */
+.icon-forgot-trainer-password {
+	color: #3f51b5;
+} /* Indigo */
+.icon-profile {
+	color: #607d8b;
+} /* Blue Grey */
+.icon-settings {
+	color: #795548;
+} /* Brown */
+.icon-logout {
+	color: #f44336;
+} /* Red */
+.sidebar-nav ul li a i {
+	margin-right: 10px;
+}
+
+/* Navbar end */
+
+.main-content {
+	flex-grow: 1;
+	padding: 20px;
+}
+
+/* General Form Container Styling */
+.form-container {
+    background: linear-gradient(135deg, #f06, #f79); /* Gradient background */
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.form-container h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.batch-class, .teacher-entry {
+    margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-groupB, .form-group {
+    margin-bottom: 15px;
+}
+
+.form-groupB label, .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+/* Input and Select Styling */
+.form-groupB input {
+	width: 97%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+}
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#batch_name {
+	width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 10px;
+}
+
+.form-groupB input:focus, .form-group select:focus {
+    border-color: #04c4de;
+    box-shadow: 0 0 5px rgba(0, 180, 255, 0.5);
+    outline: none;
+}
+
+/* Button Styling */
+.form-group button {
+    background-color: #04c4de;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.form-group button:hover {
+    background-color: #0398a0;
+    transform: scale(1.05);
+}
+
+.form-group button:active {
+    background-color: #027a8a;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.error-message {
+	background-color: #fec2cd;
+    color: #ff250d;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-groupB input, .form-group select {
+        font-size: 14px;
+    }
+
+    .form-group button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
